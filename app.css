@@ -1,0 +1,45 @@
+#titulo{
+  font-size: 120px;
+  color: white;
+  font-family: "Console sans-serif";
+  font-weight: lighter;
+}
+
+#texto{
+  padding-left: 0%;
+  padding-right: 30%;
+  font-size: 30px;
+  font-family: Arial
+  border: solid;
+  opacity: 1;
+}
+
+#fondo{
+  background: url("pic.jpg");
+  background-position: center;
+  background-size: cover;
+  opacity: 0.8;
+}
+
+.espacio{
+  padding-bottom: 5%;
+}
+
+.body{
+  background-color: black;
+  opacity: 1;
+
+}
+
+#centrado{
+  padding-left: 30%;
+  padding-right: 30%;
+}
+
+#boton{
+  font-size: 15px;
+}
+
+.derecha{
+  padding-left: 50%
+}

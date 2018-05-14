@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>To Do List with VUE.JS</title>
+        <link rel="stylesheet" type="text/css" href="bootstrap.css">
+        <link rel="stylesheet" type="text/css" href="app.css">
+        <script>
+          UPLOADCARE_LOCALE = "en";
+          UPLOADCARE_TABS = "file url facebook gdrive instagram";
+          UPLOADCARE_PUBLIC_KEY = "c808dffc9e354ecd3e1d";
+        </script>
+        <script charset="utf-8" src="//ucarecdn.com/libs/widget/3.3.0/uploadcare.full.min.js"></script>
+        <script src="https://unpkg.com/vue"></script>
+    </head>
+    <body class="body">
+
+        <div id="vue-app">
+            <div class="jumbotron" id="fondo">
+            <h1 id="titulo">TO DO LIST</h1>
+          </div>
+            <div class="container text-white" id="texto">
+              <div class="espacio">
+              <label>ADD NEW TASK: </label>
+              <input class="form-control" placeholder="Add task" v-model="newTask">
+            </div>
+
+            <div class="espacio" >
+              <button class="btn btn-success btn-lg" v-on:click="addTask(newTask)">Add Task</button>
+
+            </div>
+              <ul>
+                  <li v-for="task in tasks">
+                      {{task}} <button class="btn btn-outline-danger" v-on:click="removeTask(task); enviar()">Remove</button>
+                      <input  id="boton" type="hidden" role="uploadcare-uploader" name="content"
+                        data-crop="disabled"
+                        data-images-only="true" />
+                  </li>
+              </ul>
+
+            </div>
+        </div>
+
+        <div class="container"></div>
+          <video id="gif" autoplay="true" loop="true"></video>
+
+        </div>
+    </body>
+
+    <script src="https://www.gstatic.com/firebasejs/5.0.2/firebase.js"></script>
+    <script>
+
+  var config = {
+    apiKey: "AIzaSyCe94hdBSiE9IoUonQZMNw5SI6d-Oh4nI8",
+    authDomain: "todolist-9db1d.firebaseapp.com",
+    databaseURL: "https://todolist-9db1d.firebaseio.com",
+    projectId: "todolist-9db1d",
+    storageBucket: "",
+    messagingSenderId: "475752822917"
+  };
+  firebase.initializeApp(config);
+  </script>
+    <script src="app.js"></script>
+    <script src="giphy.js"></script>
+
+
+</html>
